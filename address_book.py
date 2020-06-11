@@ -37,7 +37,7 @@ df = pd.read_csv("tmp.csv", delimiter=",")
 df_2 = df.groupby(['lastname']).agg({'firstname': 'first', 'surname': 'first', 'organization': 'first',
                                      'position': 'first', 'phone': 'first',
                                      'email': 'first'}).reset_index().reindex(columns=df.columns)
-pprint(df_2)
+
 
 df_2.to_csv("phonebook.csv")
 pprint(df_2)
